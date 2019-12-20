@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GeneralRuleActivity">
+
+    <ImageView
+        android:id="@+id/ribbonRule1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/textRule"
+        android:src="@drawable/ribbon"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.75" />
+
+    <TextView
+        android:id="@+id/generalRule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/general_rule"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ribbonRule1"
+        app:layout_constraintStart_toStartOf="@+id/ribbonRule1"
+        app:layout_constraintTop_toTopOf="@+id/ribbonRule1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/general_area"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ribbonRule1"
+        app:layout_constraintWidth_percent="1">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <TextView
+            android:id="@+id/nameRule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/name_rule"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_name_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            app:layout_constraintBottom_toBottomOf="@+id/nameRule"
+            app:layout_constraintStart_toEndOf="@id/guideEdit"
+            app:layout_constraintTop_toTopOf="@+id/nameRule" />
+
+
+        <TextView
+            android:id="@+id/descriptRule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/description_rule"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameRule" />
+
+        <EditText
+            android:id="@+id/edit_descript_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            app:layout_constraintBottom_toBottomOf="@+id/descriptRule"
+            app:layout_constraintTop_toTopOf="@+id/descriptRule"
+            app:layout_constraintStart_toEndOf="@id/guideEdit"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ribbonRule2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/core_rule"
+        android:src="@drawable/ribbon"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/general_area"
+        app:layout_constraintWidth_percent="0.75" />
+
+
+    <TextView
+        android:id="@+id/coreRule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/core_rule"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ribbonRule2"
+        app:layout_constraintStart_toStartOf="@+id/ribbonRule2"
+        app:layout_constraintTop_toTopOf="@+id/ribbonRule2" />
+
+    <ImageView
+        android:id="@+id/doubtCore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_faq"
+        app:layout_constraintBottom_toBottomOf="@+id/ribbonRule2"
+        app:layout_constraintStart_toEndOf="@+id/coreRule"
+        app:layout_constraintTop_toTopOf="@+id/ribbonRule2" />
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/core_area"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ribbonRule2"
+        app:layout_constraintWidth_percent="1">
+
+        <TextView
+            android:id="@+id/textWebService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/choose_service"
+            app:layout_constraintStart_toStartOf="@+id/core_area"
+            app:layout_constraintTop_toTopOf="@+id/core_area" />
+
+       <ImageView
+           android:id="@+id/doubtWeb"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="8dp"
+           android:src="@drawable/ic_faq"
+           app:layout_constraintStart_toEndOf="@+id/textWebService"
+           app:layout_constraintTop_toTopOf="@+id/core_area" />
+
+        <Spinner
+            android:id="@+id/spinnerWebService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/core_area"
+            app:layout_constraintTop_toBottomOf="@id/textWebService">
+        </Spinner>
+
+       <TextView
+           android:id="@+id/textObjects"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="8dp"
+           android:text="@string/objects"
+           app:layout_constraintStart_toStartOf="@+id/core_area"
+           app:layout_constraintTop_toBottomOf="@id/spinnerWebService" />
+
+       <ImageView
+           android:id="@+id/doubtObject"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="6dp"
+           android:layout_marginTop="8dp"
+           android:src="@drawable/ic_faq"
+           app:layout_constraintStart_toEndOf="@+id/textObjects"
+           app:layout_constraintTop_toBottomOf="@id/spinnerWebService" />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recycler_locObj"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="4dp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/textObjects" />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recycler_camObj"
+           android:layout_width="wrap_content"
+           android:layout_height="0dp"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="4dp"
+           app:layout_constraintHeight_percent="0.2"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/textObjects" />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recycler_audObj"
+           android:layout_width="wrap_content"
+           android:layout_height="0dp"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="4dp"
+           app:layout_constraintHeight_percent="0.2"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/textObjects" />
+
+       <TextView
+           android:id="@+id/textOperation"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="8dp"
+           android:text="@string/operations"
+           app:layout_constraintStart_toStartOf="@+id/core_area"
+           app:layout_constraintTop_toBottomOf="@id/recycler_locObj" />
+
+
+       <ImageView
+           android:id="@+id/doubtOperation"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="8dp"
+           android:src="@drawable/ic_faq"
+           app:layout_constraintStart_toEndOf="@+id/textOperation"
+           app:layout_constraintTop_toBottomOf="@id/recycler_locObj" />
+
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recycler_operation"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="8dp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/textOperation" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_cancel"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <Button
+        android:id="@+id/btNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_next"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/Etapas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/step1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline3" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

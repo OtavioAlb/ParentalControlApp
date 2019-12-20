@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.usp.parentalcontrol">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_child_protection"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_child_protection_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".TemplateActivity"></activity>
+        <activity android:name=".RemovePIIActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".WarningActivity" />
+        <activity android:name=".HistoricActivity" />
+        <activity android:name=".ClassificationActivity" />
+        <activity android:name=".RestrictionActivity" />
+        <activity
+            android:name=".FaqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LinkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewRuleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ObligationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ExtendRuleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".IntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ParentProfileActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChildProfileActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ReviewProfileActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GeneralRuleActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

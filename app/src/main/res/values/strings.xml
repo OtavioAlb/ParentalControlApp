@@ -1,0 +1,611 @@
+<resources>
+    <string name="app_name">Controle parental</string>
+
+    <string name="title_home">Gerenciar regra</string>
+    <string name="title_parents">Área dos pais</string>
+    <string name="title_notify">Área de suporte</string>
+
+    <!-- activity_account.xml -->
+    <string name="parent_detail">Dados do pai ou responsável</string>
+    <string name="child_detail">Dados da criança</string>
+    <string name="review">Política de privacidade</string>
+
+    <!-- Parent Detail Fragment -->
+    <string name="first_name">Primeiro nome:</string>
+    <string name="first_name_hint">Primeiro nome</string>
+    <string name="last_name">Último nome:</string>
+    <string name="last_name_hint">Último nome</string>
+    <string name="email">E-mail:</string>
+    <string name="email_hint">E-mail</string>
+    <string name="updatebyemail">Você opta por receber e-mails e notificações de atualização na política de privacidade?
+        Por favor, indique abaixo caso você queira recebê-los.</string>
+    <string name="receiveupdate">Sim, eu desejo receber e-mails e notificações.</string>
+    <string name="updateArea">As notificações de atualização serão exibidas em:
+        \n\"Área de suporte > Atualização na política\".</string>
+    <string name="next">Próximo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="close">Fechar</string>
+
+    <!-- Child Detail Fragment -->
+    <string name="child_name">Informe o nome da criança, apenas para fins formais de comunicação.</string>
+    <string name="child_name_hint">Primeiro nome</string>
+    <string name="eula">Marcando a caixa abaixo, você concorda que o usuário é uma criança menor de 13 anos;
+        que você é o pai/guardião legal e o responsável pela privacidade da criança; que você reivindica a propriedade dos dados da criança
+        que são coletadas por meio do dispositivo móvel; e que você está agindo em nome da criança para proteger seus dados.</string>
+    <string name="agree_check">Eu concordo.</string>
+    <string name="back">Voltar</string>
+
+    <string name="titlePolicy"><b>Política de privacidade do brinquedo</b></string>
+
+    <!-- Review Privacy policy Fragment -->
+    <string name="privacy_policy">
+        <b>SEGURANÇA</b>
+        \n\n
+        <b>A Empresa é seguro?</b>
+        \n
+        A Empresa Sa leva a segurança a sério e se preocupa com a integridade de suas informações pessoais.
+        \n\n
+        Os brinquedos da Empresa são certificados pelo Programa de Selo iKeepSafe. Para saber mais, visite ikeepsafe.org.
+        \n\n
+        Os brinquedos são construídos sobre uma plataforma certificada no padrão UL-2900-2-2 para segurança cibernética.
+        \n\n
+        Usamos métodos físicos, administrativos e tecnológicos comercialmente razoáveis ​​para transmitir seus dados com
+        segurança, incluindo criptografia HTTPS, SSL e 128 bits. Os dados são armazenados usando o serviço de nuvem S3
+        da Amazon (infraestrutura da AWS). Embora a Amazon forneça segurança em torno dessa infraestrutura que impede o
+        acesso não autorizado a ela, apenas estar na AWS não garante segurança. Nossos engenheiros implementaram a AWS
+        de uma maneira que nos permite aproveitar os processos de segurança adequados.
+        \n\n
+        A Empresa segue todas as práticas recomendadas quando se trata de segurança. Protegemos nossas contas, servidores
+        e bancos de dados de infraestrutura com protocolo e senhas complexas. Realizamos implantações automatizadas e
+        atualizações de segurança para minimizar qualquer possível "erro do usuário" ao realizar manutenção ou atualizações.
+        \n\n
+        Gostaríamos de enfatizar novamente que levamos a segurança de seus dados muito a sério. Além de tomar todas as
+        precauções e seguir as melhores práticas de nossa parte, solicitamos que entidades terceirizadas independentes auditassem
+        nosso sistema quanto a vulnerabilidades de segurança, além de seguir os procedimentos de conformidade da COPPA.
+        \n\n
+        Se você tiver alguma dúvida, informe-nos. Nós estamos aqui para ajudar!
+        \n\n
+        <b>Que informações pessoais são coletadas de crianças menores de 13 anos?</b>
+        \n
+        Usuários com menos de 13 anos devem usar o aplicativo Empresa na conta de seus pais / responsáveis. Como resultado,
+        não coletamos intencionalmente e-mails ou outras informações de contato diretamente de crianças menores de 13 anos.
+        Quando as crianças usam o aplicativo Empresa, as gravações de áudio são capturadas como parte de seu uso.
+        \n\n
+        <b>Quais controles os pais têm sobre informações e conteúdo da conta?</b>
+        \n
+        Crianças menores de 13 anos não estão autorizadas a criar suas próprias contas, mas devem usar a conta de seus pais.
+        Portanto, os pais têm controle total sobre todas as informações e conteúdo da conta para crianças menores de 13 anos.
+        Os pais podem revisar e excluir arquivos de áudio em sua conta e também podem excluir permanentemente suas contas
+        enviando um e-mail para team@empresasa.com.
+        \n\n
+        Quando você configura sua conta de usuário do aplicativo, sua senha é criptografada. Se você precisar redefinir sua senha,
+        precisará confirmá-la por e-mail.
+        \n\n\n\n
+
+        <b>PRIVACIDADE</b>
+        \n\n
+        <b>Queremos manter as coisas em sigilo.</b>
+        \n
+        Esta página explica que tipo de informação a Empresa, Inc. e suas subsidiárias e afiliadas (coletivamente, "Empresa")
+        coletam e armazenam, incluindo Informações de Identificação Pessoal (isto é, dados que podem ser razoavelmente vinculados
+        a um indivíduo ou família) relacionados a operação do aplicativo Empresa e de nossos brinquedos, o Mailmen ™ e o
+        brinquedos ™ (coletivamente, "Produtos do Empresa").
+        \n\n
+        <b>Queremos que você saiba que sempre iremos:</b>
+        \n
+        *Ser transparente sobre os diferentes tipos de informações que coletamos e como as usamos.
+        \n
+        *Peça sua permissão antes de compartilhar suas Informações Pessoais Identificáveis ​​com terceiros para outros fins que
+        não os de fornecer os serviços da Empresa e fazê-lo somente quando acharmos que eles fornecerão um serviço adicional
+        bem-vindo.
+        \n
+        *Use as melhores ferramentas de segurança de dados da categoria para manter seus dados seguros e proteger os Produtos Empresa contra acesso não autorizado.
+        \n
+        *Ao usar este serviço, você concorda em permitir a coleta e o processamento de informações, conforme descrito abaixo.
+        \n\n
+        <b>Que informações a Empresa pede?</b>
+        \n
+        *Entrada de informações durante a configuração do brinquedo usando o aplicativo Empresa, incluindo nome e imagem associados ao brinquedo em uso.
+        \n
+        *Entrada de informações durante a configuração do brinquedo em conjunto com o Toycloud no aplicativo Empresa, incluindo o aniversário, o fuso horário e a
+        sonoridade do nome do seu filho.
+        \n
+        *Para acessar seu produto Empresa pela Internet a partir de um smartphone ou tablet, você precisará conectá-lo à sua rede
+        Wi-Fi. Durante a instalação, solicitaremos seu nome de rede Wi-Fi (SSID) e senha para conectar-se à Internet. Ele salvará
+        essas informações no dispositivo, juntamente com o seu endereço IP, para que você possa acessá-lo e controlá-lo no seu
+        smartphone ou tablet, para que ele possa se comunicar com os servidores do Empresa e baixar atualizações de software.
+        \n
+        *Além disso, quando você cria uma conta na Empresa, coletamos e armazenamos seu endereço de email. A partir desse momento,
+        seu endereço de email é usado para comunicações da Empresa. Você é responsável por manter a confidencialidade do seu ID de
+        login e senha. Como a maioria dos sites da Internet, registramos rotineiramente entradas de log (incluindo informações como
+        seu endereço IP) e informações técnicas (como tipo e versão do seu navegador) quando seu navegador, dispositivo móvel ou
+        produto Empresa entra em contato com nossos servidores. Esses arquivos de log são usados ​​para solução de problemas e são
+        armazenados em nossos servidores em nuvem.
+        \n
+        *As informações de processamento de pagamento são coletadas quando você compra em nosso site, embora não seja armazenado além do processamento.
+        \n\n
+        <b>Quais informações a Empresa coleta?</b>
+        \n
+        *Registramos seu ID do dispositivo Empresa e versão do software, conforme necessário.
+        \n
+        *Uma vez conectado à sua rede Wi-Fi, seu Produto Empresa carrega regularmente nos servidores em nuvem Empresa os dados
+        mencionados acima (excluindo sua senha Wi-Fi) para fornecer o serviço. As mensagens recebidas e enviadas são armazenadas
+        no aplicativo Empresa para sua recuperação e reprodução.
+        \n
+        *Cookies e dados de uso para nós com o Google Analytics.
+        \n
+        * Endereços de email quando você se inscreve na lista de emails da Empresa.
+        \n\n
+        <b>Como a Empresa usa as informações que coleta?</b>
+        \n
+        Usamos essas informações para fornecer e melhorar os produtos e serviços da Empresa. Podemos usar seu endereço de e-mail
+        para enviar essas informações ou solicitar que você participe de pesquisas sobre seu uso da Empresa. Utilizamos provedores
+        de serviços para executar algumas dessas funções. Esses prestadores de serviços estão impedidos de compartilhar suas
+        informações para qualquer outra finalidade.
+        \n\n
+        Utilizamos métodos padrão do setor para manter essas informações seguras e protegidas enquanto transmitidas pela sua rede
+        doméstica e pela Internet para nossos servidores em nuvem.
+        \n\n
+        <b>Por quanto tempo a Empresa salva minhas informações pessoais e como posso excluí-las?</b>
+        \n
+        A Empresa armazena suas Informações Pessoais Identificáveis ​​nos servidores em nuvem do Empresa enquanto você permanecer
+        como cliente da Empresa para fornecer o serviço. Como descrito acima, algumas informações são armazenadas diretamente no
+        dispositivo Empresa. Todas as informações são criptografadas e não podem ser acessadas facilmente. Você pode excluir as
+        informações no dispositivo Empresa excluindo o filho associado do seu aplicativo.
+        \n\n
+         Você tem o direito de revisar, excluir e / ou se recusar a permitir mais coleta ou uso das informações de seu filho.
+        Se você recusar a coleta de dados ou interromper a coleta, seu filho não poderá mais enviar mensagens de voz pelo brinquedo.
+        \n
+        Para excluir suas informações de identificação pessoal dos servidores da Empresa, solicite isso por escrito no mesmo e-mail
+        usado para criar sua conta na Empresa. Devido à maneira como mantemos certos serviços, depois que suas informações são
+        excluídas, as cópias de backup podem demorar um pouco antes de serem excluídas.
+        \n\n
+        Envie solicitações sobre informações coletadas ou solicitações de exclusão ao nosso operador principal:
+        \n
+        A Empresa notificará os clientes sobre qualquer mudança material nas práticas de coleta, uso ou divulgação com as quais
+        eles tenham consentido anteriormente.
+        \n\n
+        Empresa, Inc \n
+        847 Sumpter Road #5032 \n
+        Belleville, MI 48111 \n
+        team@empresasa.com \n
+        1-888-723-5741 \n
+        Se você tiver perguntas adicionais ou tiver uma reclamação relacionada à nossa política e práticas de privacidade, entre em
+        contato com COPPAprivacy@iKeepSafe.org. Para informações completas, consulte nossa página TERMOS DE USO.
+        \n\n\n
+        <b>Serviços Terceirizados</b>
+        \n\n
+        <b>Levamos a sério suas informações em segurança.</b>
+        \n
+        Sob nenhuma circunstância compartilhamos informações de identificação pessoal para qualquer finalidade comercial ou de marketing não
+        relacionada à entrega de produtos e serviços da Empresa. Período. Não alugamos ou vendemos nossas listas de clientes.
+        \n\n
+        Nossos técnicos de serviço e outros funcionários da Empresa supervisionaram o acesso às suas informações, para que possam responder
+        às suas perguntas se você entrar em contato conosco para obter ajuda e para que eles possam monitorar nossos servidores
+        quanto a problemas técnicos.
+        \n\n
+        Exceto conforme descrito neste documento, forneceremos apenas informações de identificação pessoal sobre nossos usuários a terceiros, se
+        exigido por lei, ou na crença de boa fé que tal ação é necessária para cumprir as leis estaduais e federais ou responder
+        a um ordem judicial, intimação ou mandado de busca.
+        \n\n
+        Podemos compartilhar suas informações agregadas e anônimas de várias maneiras, inclusive para publicar tendências e melhorar nosso sistema.
+        Tomamos medidas para garantir que as informações não possam ser vinculadas a você e exigimos que nossos parceiros
+        mantenham todas as informações em sua forma anônima.
+        \n\n
+        Suas informações pessoais podem ser coletadas, processadas e armazenadas pela Empresa ou seus provedores de serviços nos
+        Estados Unidos e em outros países onde nossos servidores residem. Como resultado, suas informações pessoais podem estar
+        sujeitas a requisitos legais, incluindo requisitos legais para divulgar informações pessoais a autoridades governamentais
+        nessas jurisdições. Se você selecionar uma parte externa para a compra, instalação ou serviço do seu dispositivo Empresa e
+        compartilhar suas informações pessoais, não poderemos controlar a coleta, armazenamento ou compartilhamento de informações
+        coletadas por essa parte. Por exemplo, se você comprou seu brinquedo de um varejista, eles podem coletar informações
+        pessoais como parte da transação. Ou a parte que instalou o dispositivo pode reter as informações que você forneceu para
+        ajudá-los na manutenção do dispositivo, se necessário. Sempre verifique as políticas de privacidade de qualquer empresa
+        que coleta suas informações pessoais.
+        \n\n
+        Para ajudar a Empresa a fornecer, manter, proteger e melhorar nossos serviços, a Empresa compartilha informações com
+        outros parceiros, fornecedores e organizações confiáveis ​​para processá-las em nosso nome, de acordo com nossas instruções,
+        e qualquer outro requisito apropriado de confidencialidade, segurança ou outros apropriado. Essas empresas terão acesso
+        apenas às informações necessárias para fornecer o serviço Empresa.
+        \n\n
+        Você pode encontrar informações sobre esses parceiros e provedores de serviços com os quais trabalhamos abaixo, incluindo
+        os dados que compartilhamos com eles ou eles nos fornecem, o serviço fornecido pelo Empresa e links para suas respectivas
+        políticas de privacidade. Essa lista pode mudar com o tempo e trabalharemos duro para mantê-la atualizada. Se você tiver
+        alguma dúvida, entre em contato aqui.
+        \n\n
+        <b>AWS</b> por fornecer servidores, bancos de dados e infraestrutura de rede para armazenamento, entrega de serviços e outros serviços relacionados.
+        \n
+        *Informações compartilhadas: todos os dados do cliente relacionados ao aplicativo Empresa são armazenados no Amazon Web Services.
+        \n\n
+        <b>mLab</b> para gerenciar os serviços de banco de dados (os dados em si são armazenados na AWS).
+        \n
+        *Informações compartilhadas: todos os dados do cliente relacionados ao aplicativo Empresa são armazenados em bancos de dados gerenciados pelo mLab.
+        Todos os dados pessoais são armazenados em bancos de dados residentes na AWS. O mLab fornece ferramentas para gerenciar
+        o dimensionamento, backup e manutenção desses bancos de dados.
+        \n\n
+        <b>Asana</b> por gerenciar nossos tickets de suporte técnico.
+        \n
+        *nformações compartilhadas: informações do cliente (email, ID do dispositivo) e outros detalhes relacionados ao problema do cliente, como logs.
+        \n\n
+        <b>Freshdesk</b> por gerenciar nossos tickets de suporte técnico.
+        \n
+        *Informações compartilhadas: informações do cliente (email, ID do dispositivo) e outros detalhes relacionados ao problema do cliente, como logs.
+        \n\n\n
+
+        <b>SUJEITO DE DADOS DA UE</b>
+        \n
+        Esta seção se aplica apenas se você for um indivíduo localizado na União Europeia ou em qualquer jurisdição na qual o Regulamento Geral de Proteção
+        de Dados ("RGPD") (ou uma lei ou regulamento que implemente o Regulamento Geral de Proteção de Dados 2016/679)
+        ("Sujeito a Dados da UE ").
+        \n\n
+        <b>Controlador de dados</b>
+        \n
+        Empresa é o controlador de dados para o processamento de dados pessoais (conforme definido no GDPR) de nossos clientes e candidatos a emprego.
+        Atuamos como um processador de dados em nome dos Clientes quando processamos Dados Pessoais de qualquer usuário final
+        com a finalidade de fornecer o Serviço aos Clientes de acordo com o contrato do Cliente aplicável.
+        \n\n
+        <b>Seu direito</b>
+        \n
+        For Personal Data that we process as a data controller, you may have the following rights in relation to your Personal Data, depending on applicable law:
+        \n\n
+        <b>Direito de acesso</b> Se você nos perguntar, confirmaremos se estamos processando seus Dados Pessoais e, em caso afirmativo, forneceremos uma cópia
+        desses Dados Pessoais (junto com outros detalhes).
+        \n\n
+        <b>Direito à retificação</b> Se seus dados pessoais forem imprecisos ou incompletos, você poderá solicitar que os corrijamos ou os completemos.
+        \n\n
+        <b>Direito à portabilidade de dados</b> Você pode ter o direito de obter os Dados Pessoais que processamos sobre você em um formato estruturado,
+        comumente usado e legível por máquina, e reutilizá-los em outros lugares.
+        \n\n
+        <b>Bases legais</b>
+        \n
+        As bases legais para o uso de suas informações, conforme estabelecido nesta Política de Privacidade, são as seguintes:
+        \n\n
+        *Quando o uso de suas informações for necessário para cumprir uma obrigação legal de acordo com a lei do Estado-Membro da UE (por exemplo,
+        fornecer informações às autoridades fiscais da UE sobre receitas e compras originárias da UE).
+        \n
+        *Quando o uso de suas informações for necessário para cumprir nossas obrigações sob um contrato com você (por exemplo, para cumprir: os termos de
+        serviço de nossos sites que você aceita navegando nos sites/registrando; e/ou nosso contrato para fornecer nossos
+        Serviço para você); ou
+        \n
+        *Onde o uso de suas informações é necessário para nossos interesses legítimos ou de terceiros (por exemplo, para fornecer segurança a nossos sites,
+        produtos, software ou aplicativos; operar nossos negócios e nossos Serviços; fazer e receber pagamentos; cumprir
+        requisitos legais e defender nossos direitos legais; evitar fraudes e conhecer o cliente a quem estamos fornecendo
+        serviços).
+        \n
+        *Onde temos o seu consentimento em participar de uma atividade de processamento específica.
+        \n\n
+        Importante: Esta política de privacidade foi traduzida e adaptada da empresa de brinquedos ToyMail Co, disponível em: https://toymail.co/pages/privacy
+</string>
+    <string name="read_check">Eu li e concordo com os termos.</string>
+    <string name="btFinish">Finalizar</string>
+
+    <!-- Area dos Pais -->
+    <string name="guide">Guia para os pais</string>
+    <string name="monitor">Monitor para os pais</string>
+    <string name="parent_area">Olá, Fulano.</string>
+
+    <string name="txtRisk">Classificação de riscos</string>
+    <string name="descRisk">Classifica os riscos à privacidade com base em técnicas estatísticas ou de
+        aprendizado de máquina, como modelos probabilísticos generativos, para ajudar na tomada de decisão
+        dos pais.
+    \n\n Por exemplo:
+    \n 1- Vazamento de dados;
+    \n 2- Vigilância de dados;
+    \n 3- Controle remoto não autorizado do brinquedo;
+        \n\n\n\n Obs: funcionalidade ainda não implementada.
+    </string>
+    <string name="btrisk">Classificação de riscos</string>
+
+    <string name="txtRestriction">Restrições de uso</string>
+    <string name="descRstriction">Informa aos pais/responsáveis sobre as restrições de desempenho ou funcionalidades que a regra de privacidade pode causar na utilização do brinquedo inteligente.
+        \n\n Por exemplo, um brinquedo que utiliza serviços de voz que coleta (lê) áudios, processa os dados recebidos e envia (escreve) a resposta, e assim provê a funcionalidade de diálogo.
+        Caso a criação de uma regra de privacidade restrinja as operações Ler e/ou Escrever para dados de áudio, a funcionalidade ficará comprometida.
+    \n\n\n\n Obs: funcionalidade ainda não implementada.</string>
+    <string name="btrestriction">Restrições de uso</string>
+
+    <string name="contentLearn">Guida para aprendizado</string>
+    <string name="descContentLearn">Fornece aos pais/responsáveis orientações sobre riscos de privacidade online para crianças que
+        usam brinquedos inteligentes, além de conteúdos para facilitar a aprendizagem e tirar dúvidas com relação à ferramenta,
+        destacando a importância dos pais usarem os recursos fornecidos pela ferramenta de controle dos pais.</string>
+    <string name="bteducation">Conteúdo para aprendizado</string>
+
+    <string name="txtLink">Links úteis</string>
+    <string name="descLink">Provê links para conteúdos importantes, facilitando acesso dos pais/responsáveis sobre,
+        por exemplo, atos, leis e políticas de privacidade da empresa de brinquedos.</string>
+    <string name="btlink">Links úteis</string>
+
+    <string name="txtHistoric">Histórico de atividades</string>
+    <string name="descHistoric">Registre o histórico de todas as atividades realizadas pela criança ao usar o
+        brinquedo inteligente, incluindo a gravação de conversas.
+    \n\n\n\n Obs: funcionalidade ainda não implementada.</string>
+    <string name="bthistory">Histórico de atividades</string>
+
+    <string name="txtAlert">Alerta de assuntos sensíveis</string>
+    <string name="descAlert">Aplica técnicas de processamento de linguagem natural nos diálogos entre a criança e o
+        brinquedo inteligente para alertar imediatamente os pais, caso sejam identificados assuntos suspeitos, se
+        desejado pelos pais.
+    \n\n Por exemplo, palavras como drogas, arma, morte, assédio, sangue, etc.
+    \n\n\n\n Obs: funcionalidade ainda não implementada.</string>
+    <string name="btAlert">Alerta de assuntos</string>
+
+    <!-- Area de notificação -->
+    <string name="txtChat">Chat</string>
+    <string name="descChat">Canal de comunicação para proporcionar aos pais/responsáveis uma maneira fácil e direta de registrar queixas e tirar dúvida perante a empresa de brinquedos.</string>
+    <string name="btchat">Chat</string>
+    <string name="btAccess">Acessar</string>
+
+    <string name="txtFaq">Perguntas frequentes (FAQ)</string>
+    <string name="descFaq">Fornece aos pais/responsáveis legais respostas para as perguntas mais relevantes relacionadas ao uso do brinquedo inteligente.</string>
+    <string name="btfaq">FAQ</string>
+
+
+    <string name="btDisableAccount">Desativar conta</string>
+    <string name="descDisable">Você tem certeza que deseja desativar a conta de usuário?
+    \n\n Todos os dados de configuração, assim como os dados de cadastro e PIIs coletados serão apagados.</string>
+
+    <string name="txtRemovePII">Solicitar remoção de PII</string>
+    <string name="descRemovePII">Permite que os pais solicitem junto à empresa a exclusão de todas as informações pessoais de identificação (Personally Identifiable Information - PII) coletadas da
+        criança durante as interações com o brinquedo.
+    \n\n As PIIs são dados que tem o potencial de identificar e localizar um indivíduo em particular.
+       \n Por exemplo, dados de localização de GPS, nomes completos, endereços, etc. </string>
+    <string name="removePII">Solicitar remoção de PII</string>
+    <string name="removeRequire">Solicitar Remoção dos PIIs</string>
+
+
+    <string name="textNotify">Atualização na política</string>
+
+    <!-- Privacy rules manager -->
+    <string name="textRule">Regras de privacidade</string>
+    <string name="privacyRule">Gerencie as regras de privacidade</string>
+    <string name="btNew"> Nova regra</string>
+    <string name="btEdit"> Editar</string>
+    <string name="btDelete"> Apagar</string>
+    <string name="toolTipRevoke">Revogar regra</string>
+    <string name="toolTipDescrip">Descrição da regra</string>
+    
+    <string name="txtTemplate">Modelos existentes</string>
+    <string name="descTemplate">A ferramenta provê modelos de regras de privacidade predefinidos, e também permite a utilização de modelos externos.</string>
+    <string name="btSearch">Buscar</string>
+    <string name="btSelect">Selecionar</string>
+
+    <string name="step1">1/4</string>
+    <string name="step2">2/4</string>
+    <string name="step3">3/4</string>
+    <string name="step4">4/4</string>
+
+    <!--General Privacy Rule -->
+    <string name="general_rule">Criar nova regra</string>
+    <string name="name_rule">Nome da regra:</string>
+    <string name="description_rule">Descrição da regra:</string>
+    <string name="core_rule">Controle de acesso</string>
+    <string name="choose_service">Escolha o serviço móvel:</string>
+    <string-array name="spinner_web_service">
+        <item>Escolha...</item>
+        <item>Serviço de localização</item>
+        <item>Serviço de imagem</item>
+        <item>Serviço de voz</item>
+    </string-array>
+
+    <string name="operations">Com as seguintes operações:</string>
+    <string name="read">Ler</string>
+    <string name="write">Escrever</string>
+
+    <string name="objects">Acessa o(s) objeto(s):</string>
+    <string name="absolute_loc">Localização absoluta</string>
+    <string name="relative_loc">Localização relativa</string>
+    <string name="image">Foto</string>
+    <string name="video">Vídeo</string>
+    <string name="audio">Áudio</string>
+
+    <!--Extend Rules-->
+    <string name="textPurpose">Propósitos</string>
+    <string name="descPurpose">Um propósito define a finalidade para a qual os dados coletados poderão ser usados, conforme abaixo:
+                \n\n Jogos: dados aplicados ao desempenho da jogabilidade;
+                \n\n Pessoal: dados aplicados à utilização do usuário do brinquedo;
+                \n\n Marketing: dados aplicados ao comércio e a estratégia empresarial;
+                \n\n Administrativo: dados aplicados aos processos administrativos internos da empresa do brinquedo;
+                \n\n Pesquisa: dados aplicados à pesquisa científica;
+                \n\n Qualquer um: Qualquer um dos propósitos listados acima;</string>
+
+    <string name="checkAll">Todos os propósitos</string>
+    <string name="checkGame">Jogos</string>
+    <string name="checkPersonal">Pessoal</string>
+    <string name="checkMarketing">Marketing</string>
+    <string name="checkAdministrate">Administrativo</string>
+    <string name="checkResearch">Pesquisa</string>
+
+    <string name="textRecipients">Destinatários</string>
+    <string name="descRecipients">Tipos de destinatários representam as entidades que terão permissão para receber os dados coletados, conforme abaixo:
+                \n\n Individual: o próprio usuário do brinquedo ou um serviço móvel vinculado ao brinquedo;
+                \n\n Grupo: um grupo de usuários do brinquedo (por exemplo, para brinquedos com função multi-jogador);
+                \n\n Terceiro: uma entidade externa, restringida pelo e responsável perante o detentor do objeto para o qual foi solicitado acesso;
+                \n\n Qualquer um: qualquer entidade interna ou externa;</string>
+
+    <string name="checkIndividual">Individual</string>
+    <string name="checkGroup">Grupo</string>
+    <string name="checkThird">Terceiros</string>
+    <string name="checkAny">Qualquer um</string>
+
+    <!--Obligations and Retentions-->
+    <string name="obli_ret">Obrigações</string>
+    <string name="describ">
+        XXXXXXXXXXXXXXXXXXXXX
+    </string>
+    <string name="popupObligation">
+        As obrigações referem-se a políticas que devem ser cumpridas para que seja mantido o acesso aos dados pelos interessados.
+        \n\n
+        Essas políticas são geralmente vinculadas a legislação e atos, incluindo:
+        \n\n
+        PIPEDA: Lei de Proteção de Informações Pessoais e Documentos Eletrônicos;
+        \n\n
+        COPPA: Lei de Proteção à Privacidade Online das Crianças;
+        \n\n
+        Para mais informações sobre esses atos, acesse: \n "Área dos pais > Links úteis".
+    </string>
+    <string name="pipeda">PIPEDA</string>
+    <string name="coppa">COPPA</string>
+    <string name="textRetention">Retenção</string>
+    <string name="describ_retenttion">XXXXXXXXX
+    </string>
+    <string name="popupRetention">
+        Retenção representa por quanto tempo você permite que os dados coletados sejam retidos:
+       \n\n
+        Sem retenção: os dados solicitados não são retidos por mais de um breve momento de tempo, após o qual serão
+        destruídos sem armazenamento;
+        \n\n
+        Propósito definido: os dados solicitado são retidos apenas pelo tempo necessário para atender ao propósito declarado
+        e serão descartados assim que finalizado o propósito;
+        \n\n
+        Requisito legal: os dados solicitados são retidos apenas para atender a um objetivo declarado conforme exigido por lei
+        ou responsabilidade de acordo com lei aplicável;
+        \n\n
+        Práticas de negócio: os dados solicitados são retidos de acordo com as práticas comerciais declaradas nos termos de serviço da ferramenta (conforme consta na "Área de suporte");
+        \n\n
+        Indefinidamente: os dados solicitados são retidos por um período indeterminado de tempo, conforme a intenção do interessado nos dados;
+        \n\n
+        Personalizado: os dados solicitados são retidos pelo tempo determinado pelo usuário;
+    </string>
+
+    <string name="noRetention">Sem retenção</string>
+    <string name="propositoDefinido">Propósito definido</string>
+    <string name="businessPractices"> Práticas de negócio</string>
+    <string name="legalRequirement">Requisito legal</string>
+    <string name="indefinitely">Indefinido</string>
+    <string name="custom">Personalizado</string>
+
+    <string-array name="spinner_number">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="spinner_date">
+        <item>dia(s)</item>
+        <item>mes(es)</item>
+        <item>ano(s)</item>
+    </string-array>
+
+
+    <!--Review Rule-->
+    <string name="review_rule">Revisar e adicionar regra</string>
+    <string name="describ_review">Texto</string>
+    <string name="textresumeRule">Texto</string>
+
+    <string-array name="operations_array">
+        <item>Ler</item>
+        <item>Escrever</item>
+    </string-array>
+
+    <string-array name="loc_objects">
+        <item>Localizacao absoluta</item>
+        <item>Localizacao relativa</item>
+    </string-array>
+
+    <string-array name="cam_objects">
+        <item>Foto</item>
+        <item>Video</item>
+    </string-array>
+
+    <string-array name="voz_objects">
+        <item>Audio</item>
+    </string-array>
+
+    <!--Extend Activity-->
+    <string-array name="purpose">
+        <item>Jogos</item>
+        <item>Pessoal</item>
+        <item>Marketing</item>
+        <item>Administrativo</item>
+        <item>Pesquisa</item>
+        <item>Qualquer um</item>
+    </string-array>
+
+    <string-array name="recipients">
+        <item>Individual</item>
+        <item>Grupo</item>
+        <item>Terceiro</item>
+        <item>Qualquer um</item>
+    </string-array>
+
+    <!--Onbligation & Retention Activity -->
+    <string-array name="obligation">
+        <item>PIPEDA</item>
+        <item>COPPA</item>
+    </string-array>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="btProfile">Perfil dos pais</string>
+
+    <!-- Header listview -->
+    <string name="column_1">Nome da regra</string>
+    <string name="column_2">Serviço móvel</string>
+    <string name="column_3">Funções</string>
+
+    <string name="txtRevoke">Revogar regra</string>
+    <string name="descriRevogar">Deseja revogar esta regra de privacidade e desabilitar o funcionamento de suas ações?
+    \n\n Isso não apagará a regra, e ela poderá ser habilitada novamente.</string>
+
+    <!--Links Uteis-->
+    <string name="pipedaDesc">Personal Information Protection and Electronic Documents Act (PIPEDA)</string>
+    <string name="pipedaLink">
+        <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a>
+    </string>
+    <string name="coppaDesc">Children\'s Online Privacy Protection Act (COPPA)</string>
+    <string name="coppaLink">
+        <a href="http://www.coppa.org/comply.htm">COPPA</a>
+    </string>
+    <string name="gdprDesc">General Data Protection Regulation (GDPR)</string>
+    <string name="gdprLink">
+        <a href="https://gdpr-info.eu/">GDPR</a>
+    </string>
+
+    <string name="termosLink">
+        <a href="https://google.com.br/">Termos de serviço</a>
+    </string>
+
+    <string name="politicaLink">
+        <a href="https://google.com.br/">Política de privacidade</a>
+    </string>
+
+    <string-array name="atualizations">
+        <item>Empresa Compartilhamento 1</item>
+        <item>Empresa Coleta de dados</item>
+        <item>Empresa Compartilhamento 2</item>
+    </string-array>
+
+    <string name="atualizacao">
+        <b>Serviços terceirizados</b>
+        \n\n Mais um parceiro incluído:
+        \n <b>CleverTap:</b>
+        para enviar mensagens de email, notificações, análises e suporte ao cliente.
+        \n\n*Informações compartilhadas: informações do dispositivo, informações do Sistema Operacional (SO), logs de eventos e falhas, ID do usuário para suporte.
+        \n\n
+        Atualizado: 10/12/2019
+    </string>
+
+    <string name="atualizacaoColeta">
+        <b>Coleta de dados</b>
+        \n\n Dados que serão coletados a partir de agora:
+        \n Cookies e dados de utilização coletados para análise de tráfego no Google Analytics.
+        \n\n
+        Atualizado: 17/12/2019
+    </string>
+
+    <string name="atualizacaoCompart">
+        <b>Serviços terceirizados</b>
+        \n\n Mais um parceiro incluído:
+        \n<b>AWS:</b>
+        por fornecer servidores, bancos de dados e infraestrutura de rede para armazenamento,
+        entrega de serviços e outros serviços relacionados.
+        \n\n*Informações compartilhadas: todos os dados do cliente relacionados ao aplicativo Empresa são armazenados no Amazon Web Services.
+        \n\n
+        Atualizado: 22/11/2019
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
