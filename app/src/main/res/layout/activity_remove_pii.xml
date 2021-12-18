@@ -42,19 +42,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ribbonPII" />
 
+
+        <EditText
+            android:id="@+id/editRemovePII"
+            android:background="@drawable/list_custom_rectangle"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descPii" />
+
+
     <Button
         android:id="@+id/removeRequire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/button_next"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:background="@drawable/button_next"
-        android:textColor="@color/white"
         android:text="@string/removeRequire"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descPii" />
+        app:layout_constraintTop_toBottomOf="@+id/editRemovePII" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineParent2"
@@ -78,5 +95,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guidelineParent2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

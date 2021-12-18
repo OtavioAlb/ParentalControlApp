@@ -49,9 +49,9 @@ public class ReviewProfileActivity extends AppCompatActivity {
 
     public void confirmMessage(){
         AlertDialog.Builder confirmBox = new AlertDialog.Builder(this);
-        confirmBox.setTitle("Confirmar");
-        confirmBox.setMessage("Tem certeza que deseja confirmar os dados?");
-        confirmBox.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+        confirmBox.setTitle("Confirm");
+        confirmBox.setMessage("Are you sure you want to confirm the data?");
+        confirmBox.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 addProfile();
@@ -59,7 +59,7 @@ public class ReviewProfileActivity extends AppCompatActivity {
                 startActivity(reviewScreen);
             }
         });
-        confirmBox.setNegativeButton("Nao", new DialogInterface.OnClickListener() {
+        confirmBox.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //Toast.makeText(ReviewProfileActivity.this, "Dados salvos", Toast.LENGTH_SHORT).show();

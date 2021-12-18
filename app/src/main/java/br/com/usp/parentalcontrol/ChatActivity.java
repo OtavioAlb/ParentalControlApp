@@ -15,7 +15,7 @@ public class ChatActivity extends AppCompatActivity {
     Button btClose;
     Button btAccess;
     ListView listSubjects;
-    String[] subjects = {"Dúvidas", "Reclamações", "Recomendações"};
+    String[] subjects = {"Questions", "Complaints", "Suggestions"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +46,9 @@ public class ChatActivity extends AppCompatActivity {
 
     public void accessConfirm(){
         AlertDialog.Builder accessBox = new AlertDialog.Builder(this);
-        accessBox.setMessage("Tela de demonstração." +
-                "\n\n Funcionalidade não implementada.");
-        accessBox.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        accessBox.setMessage("Wait for one of our collaborators to connect..." +
+                "\n\n Demo screen.");
+        accessBox.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
             }

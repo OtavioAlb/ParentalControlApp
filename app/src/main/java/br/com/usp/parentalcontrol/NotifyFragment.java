@@ -33,7 +33,7 @@ public class NotifyFragment extends Fragment {
     TextView txtTerms;
     TextView txtPolitic;
 
-    String[] notifies = {"Compartilhamento: CleverTap", "Coleta de Dados: Cookies", "Compartilhamento: AWS"};
+    String[] notifies = {"Sharing: CleverTap", "Data collect: Cookies", "Sharing: AWS"};
 
 
     public NotifyFragment() {
@@ -50,10 +50,22 @@ public class NotifyFragment extends Fragment {
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, notifies);
 
         txtTerms = view.findViewById(R.id.txtTerms);
-        txtTerms.setMovementMethod(LinkMovementMethod.getInstance());
+        txtTerms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ServiceTerms();
+            }
+        });
+        //txtTerms.setMovementMethod(LinkMovementMethod.getInstance());
 
         txtPolitic = view.findViewById(R.id.txtPolitic);
-        txtPolitic.setMovementMethod(LinkMovementMethod.getInstance());
+        txtPolitic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PrivacyPolice();
+            }
+        });
+        //txtPolitic.setMovementMethod(LinkMovementMethod.getInstance());
 
         listViewNotify = view.findViewById(R.id.listViewNotify);
         listViewNotify.setAdapter(adapter);
@@ -63,15 +75,15 @@ public class NotifyFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String teste = adapterView.getItemAtPosition(i).toString();
                 switch (teste){
-                    case "Compartilhamento: CleverTap":
+                    case "Sharing: CleverTap":
                         Message1();
                         break;
 
-                    case "Coleta de Dados: Cookies":
+                    case "Data collect: Cookies":
                         Message2();
                         break;
 
-                    case "Compartilhamento: AWS":
+                    case "Sharing: AWS":
                         Message3();
                         break;
                 }
@@ -110,14 +122,14 @@ public class NotifyFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder alertConfirm = new AlertDialog.Builder(getContext());
-                alertConfirm.setTitle("Desativar a conta de usuário");
+                alertConfirm.setTitle("Deactivate user\'s account");
                 alertConfirm.setMessage(getResources().getString(R.string.descDisable));
-                alertConfirm.setPositiveButton("Sim, tenho certeza.", new DialogInterface.OnClickListener() {
+                alertConfirm.setPositiveButton("Yes, i\'m sure", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                     }
                 });
-                alertConfirm.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                alertConfirm.setNegativeButton("No, cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -130,16 +142,41 @@ public class NotifyFragment extends Fragment {
         return view;
     }
 
-    public void Message1(){
+    public void ServiceTerms(){
         AlertDialog.Builder notifyUpdate = new AlertDialog.Builder(getContext());
-        notifyUpdate.setTitle("Atualização na política de privacidade");
-        notifyUpdate.setMessage(getResources().getString(R.string.atualizacao));
-        notifyUpdate.setPositiveButton("ver Política completa", new DialogInterface.OnClickListener() {
+        notifyUpdate.setTitle("Service terms");
+        notifyUpdate.setMessage(R.string.termosDesc);
+        notifyUpdate.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
             }
         });
-        notifyUpdate.setNegativeButton("Fechar", new DialogInterface.OnClickListener() {
+        notifyUpdate.show();
+    }
+
+    public void PrivacyPolice(){
+        AlertDialog.Builder notifyUpdate = new AlertDialog.Builder(getContext());
+        notifyUpdate.setTitle("Privacy policy");
+        notifyUpdate.setMessage(R.string.politicDesc);
+        notifyUpdate.setNeutralButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        notifyUpdate.show();
+    }
+
+    public void Message1(){
+        AlertDialog.Builder notifyUpdate = new AlertDialog.Builder(getContext());
+        notifyUpdate.setTitle("Privacy policy update");
+        notifyUpdate.setMessage(getResources().getString(R.string.atualizacao));
+        notifyUpdate.setPositiveButton("See full policy", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                PoliticLink();
+            }
+        });
+        notifyUpdate.setNegativeButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -150,14 +187,15 @@ public class NotifyFragment extends Fragment {
 
     public void Message2(){
         AlertDialog.Builder notifyUpdate = new AlertDialog.Builder(getContext());
-        notifyUpdate.setTitle("Atualização na política de privacidade");
+        notifyUpdate.setTitle("Privacy policy update");
         notifyUpdate.setMessage(getResources().getString(R.string.atualizacaoColeta));
-        notifyUpdate.setPositiveButton("ver Política completa", new DialogInterface.OnClickListener() {
+        notifyUpdate.setPositiveButton("See full policy", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                PoliticLink();
             }
         });
-        notifyUpdate.setNegativeButton("Fechar", new DialogInterface.OnClickListener() {
+        notifyUpdate.setNegativeButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -168,20 +206,33 @@ public class NotifyFragment extends Fragment {
 
     public void Message3(){
         AlertDialog.Builder notifyUpdate = new AlertDialog.Builder(getContext());
-        notifyUpdate.setTitle("Atualização na política de privacidade");
+        notifyUpdate.setTitle("Privacy policy update");
         notifyUpdate.setMessage(getResources().getString(R.string.atualizacaoCompart));
-        notifyUpdate.setPositiveButton("ver Política completa", new DialogInterface.OnClickListener() {
+        notifyUpdate.setPositiveButton("See full policy", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                PoliticLink();
             }
         });
-        notifyUpdate.setNegativeButton("Fechar", new DialogInterface.OnClickListener() {
+        notifyUpdate.setNegativeButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         });
         notifyUpdate.show();
+    }
+
+    public void PoliticLink(){
+        AlertDialog.Builder seePolitc = new AlertDialog.Builder(getContext());
+        seePolitc.setMessage(R.string.politicDesc);
+        seePolitc.setNeutralButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        seePolitc.show();
     }
 
 }

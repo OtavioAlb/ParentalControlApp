@@ -17,17 +17,17 @@ public class IntroActivity extends AppIntro {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_intro);
 
-        addSlide(AppIntroFragment.newInstance("Bem-vindo à ferramenta de controle parental", "App para auxiliar você na proteção dos dados do seu filho, por meio da criação de regras de privacidade.",
+        addSlide(AppIntroFragment.newInstance("Welcome to the parental control tool", "App to assist you in protecting your child's data by creating privacy rules.",
                 R.drawable.protection, ContextCompat.getColor(getApplicationContext(), R.color.blue)));
 
-        addSlide(AppIntroFragment.newInstance("Regras de privacidade!","Com a criação de regras de privacidade, é possível configurar, de acordo com as suas preferências, quais dados do brinquedo poderão ser coletados e quem poderá coletá-los.",
+        addSlide(AppIntroFragment.newInstance("Privacy rules!","By creating privacy rules, you can configure, according to your preferences, which data can be collected and who can collect it.",
                 R.drawable.rule_intro, ContextCompat.getColor(getApplicationContext(), R.color.blue)));
 
-        addSlide(AppIntroFragment.newInstance("Acesse a área dos pais","A área dos pais possui conteúdos e funcionalidades para auxiliar a entender esta ferramenta de controle parental e o ambiente tecnológico do brinquedo. Aprenda sobre a manipulação de dados" +
-                        ", sobre os riscos associados ao uso do brinquedo e muito mais!",
+        addSlide(AppIntroFragment.newInstance("Visit parent area","The parent area has contents and functionalities to help understand this parental control tool " +
+                        "and the toy technological environment. Learn about data manipulation, the risks associated with using a toy and more!",
                 R.drawable.parent, ContextCompat.getColor(getApplicationContext(), R.color.blue)));
 
-        addSlide(AppIntroFragment.newInstance("Vamos lá!", "Primeiro, vamos criar o perfil dos pais ou responsáveis para ter acesso à ferramenta.",
+        addSlide(AppIntroFragment.newInstance("Let's go!", "First, you need to create the parent/guardian profile to gain access to the tool.",
                 R.drawable.success, ContextCompat.getColor(getApplicationContext(), R.color.blue)));
 
         showSkipButton(false);

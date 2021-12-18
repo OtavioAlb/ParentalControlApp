@@ -26,8 +26,8 @@ public class GuideActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        videos.add(new Videos("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/FmCeO3LrIEs\" frameborder=\"0\" allowfullscreen></iframe>"));
-        videos.add(new Videos("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/v2JUaKn9Apk\" frameborder=\"0\" allowfullscreen></iframe>"));
+        videos.add(new Videos("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/vxm47zrqa5Y\" frameborder=\"0\" allowfullscreen></iframe>"));
+        videos.add(new Videos("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/zAMw-OGhO-g\" frameborder=\"0\" allowfullscreen></iframe>"));
 
         VideosAdapter videosAdapter = new VideosAdapter(videos);
         recyclerView.setAdapter(videosAdapter);

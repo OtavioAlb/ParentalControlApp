@@ -91,21 +91,21 @@ public class ReviewRuleActivity extends AppCompatActivity {
 
 
         textDescribName = findViewById(R.id.textDescribName);
-        textDescribName.setText("Você está criando a regra de privacidade "+(name_rule).toUpperCase()+"." +
-                " Por favor, revise cuidadosamente todos os dados informados:");
+        textDescribName.setText("You are creating the privacy rule "+(name_rule).toUpperCase()+"." +
+                " Please carefully review all data provided:");
 
         textResumeRule = findViewById(R.id.textresumeRule);
-        textResumeRule.setText("A regra de privacidade "+(name_rule).toUpperCase()+" permitirá que o serviço móvel "+(spinnerService).toUpperCase()+" realize a(s) operação(ões)"+
-                "" +(operation_check).toUpperCase()+" no(s) objeto(s) "+(object).toUpperCase()+", com o(s) propósito(s) de uso "
-                +(purpose).toUpperCase()+", podendo ser compartilhado(s) de forma "+(recipient).toUpperCase()+", " +
-                "precisando cumprir as obrigações definidas em "+(obligation).toUpperCase()+", e retidas pelo tempo "+(retention).toUpperCase()+".");
+        textResumeRule.setText("Privacy rule "+(name_rule).toUpperCase()+" will allow mobile service "+(spinnerService).toUpperCase()+" to perform " +
+                "operation(s) "+(operation_check).toUpperCase()+" on object(s) "+(object).toUpperCase()+" for the purpose(s) of " +
+                "use "+(purpose).toUpperCase()+" and can be shared in the form "+(recipient).toUpperCase()+", having to fulfill the obligation(s) " +
+                "defined in "+(obligation).toUpperCase()+", and retained by the time "+(retention).toUpperCase()+".");
     }
 
     public void confirmMessage(){
         AlertDialog.Builder confirmBox = new AlertDialog.Builder(this);
-        confirmBox.setTitle("Confirmar");
-        confirmBox.setMessage("Tem certeza que deseja confirmar os dados?");
-        confirmBox.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+        confirmBox.setTitle("Confirm");
+        confirmBox.setMessage("Are you sure you want to confirm the data?");
+        confirmBox.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 addRule();
@@ -113,7 +113,7 @@ public class ReviewRuleActivity extends AppCompatActivity {
                 startActivity(reviewRule);
             }
         });
-        confirmBox.setNegativeButton("Nao", new DialogInterface.OnClickListener() {
+        confirmBox.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //Toast.makeText(ReviewRuleActivity.this, "Dados salvos", Toast.LENGTH_SHORT).show();
@@ -123,7 +123,6 @@ public class ReviewRuleActivity extends AppCompatActivity {
     }
 
     private void addRule() {
-
 
         databaseSql.insertRule(name_rule, descri_rule, spinnerService, operation_check, object, purpose,
                 recipient, obligation, retention);

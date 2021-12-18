@@ -78,7 +78,13 @@ public class ExtendRuleActivity extends AppCompatActivity {
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendData();
+                if (purposeAdapter.txcheckPurpose != null){
+                    sendData();
+                }else if(recipientAdapter.txtCheckRecipient != null){
+                    sendData();
+                }else{
+                    noNull();
+                }
             }
         });
 
@@ -134,7 +140,7 @@ public class ExtendRuleActivity extends AppCompatActivity {
         AlertDialog.Builder boxWeb = new AlertDialog.Builder(this);
         boxWeb.setTitle(R.string.textPurpose);
         boxWeb.setMessage(R.string.descPurpose);
-        boxWeb.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        boxWeb.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -147,12 +153,24 @@ public class ExtendRuleActivity extends AppCompatActivity {
         AlertDialog.Builder boxWeb = new AlertDialog.Builder(this);
         boxWeb.setTitle(R.string.textRecipients);
         boxWeb.setMessage(R.string.descRecipients);
-        boxWeb.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        boxWeb.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         })
         ;boxWeb.show();
+    }
+
+    public void noNull() {
+        AlertDialog.Builder opNull = new AlertDialog.Builder(this);
+        opNull.setMessage("Selecting at least one of the field options is required.");
+        opNull.setNeutralButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        opNull.show();
     }
 }

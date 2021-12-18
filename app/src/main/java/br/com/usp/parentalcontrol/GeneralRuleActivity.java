@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class GeneralRuleActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class GeneralRuleActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
 
     EditText editNameRule;
@@ -80,61 +80,61 @@ public class GeneralRuleActivity extends AppCompatActivity implements AdapterVie
 
         String[] operations = getResources().getStringArray(R.array.operations_array);
 
-        for (int i=0;i<operations.length;i++){
+        for (int i = 0; i < operations.length; i++) {
             Operation operation1 = new Operation(operations[i], false);
             list.add(operation1);
         }
 
-        opAdapter = new OperationAdapter(GeneralRuleActivity.this,list);
+        opAdapter = new OperationAdapter(GeneralRuleActivity.this, list);
         recyclerViewOp.setAdapter(opAdapter);
 
         textObjects = findViewById(R.id.textObjects);
 
         /*CheckBox Location*/
-        recyclerViewObj= findViewById(R.id.recycler_locObj);
+        recyclerViewObj = findViewById(R.id.recycler_locObj);
 
         recyclerViewObj.setLayoutManager(new LinearLayoutManager(this));
 
         String[] locObjects = getResources().getStringArray(R.array.loc_objects);
 
-        for(int i=0;i<locObjects.length;i++){
+        for (int i = 0; i < locObjects.length; i++) {
             locationObjects objects1 = new locationObjects(locObjects[i], false);
             listLoc.add(objects1);
         }
 
-        objAdapter = new locationObjectsAdapter( GeneralRuleActivity.this,listLoc);
+        objAdapter = new locationObjectsAdapter(GeneralRuleActivity.this, listLoc);
         recyclerViewObj.setAdapter(objAdapter);
         /*---*/
 
         /*CheckBox Camera*/
-        recyclerViewCam= findViewById(R.id.recycler_camObj);
+        recyclerViewCam = findViewById(R.id.recycler_camObj);
 
         recyclerViewCam.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         String[] camObjects = getResources().getStringArray(R.array.cam_objects);
 
-        for(int i=0;i<camObjects.length;i++){
+        for (int i = 0; i < camObjects.length; i++) {
             CameraObjects camera1 = new CameraObjects(camObjects[i], false);
             listCam.add(camera1);
         }
 
-        camAdapter = new cameraObjectsAdapter( GeneralRuleActivity.this,listCam);
+        camAdapter = new cameraObjectsAdapter(GeneralRuleActivity.this, listCam);
         recyclerViewCam.setAdapter(camAdapter);
         /*---*/
 
         /*CheckBox Audio*/
-        recyclerViewAudio= findViewById(R.id.recycler_audObj);
+        recyclerViewAudio = findViewById(R.id.recycler_audObj);
 
         recyclerViewAudio.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         String[] audioObjects = getResources().getStringArray(R.array.voz_objects);
 
-        for(int i=0;i<audioObjects.length;i++){
+        for (int i = 0; i < audioObjects.length; i++) {
             AudioObjects audio1 = new AudioObjects(audioObjects[i], false);
             listAudio.add(audio1);
         }
 
-        audioAdapter = new AudioObjectsAdapter( GeneralRuleActivity.this,listAudio);
+        audioAdapter = new AudioObjectsAdapter(GeneralRuleActivity.this, listAudio);
         recyclerViewAudio.setAdapter(audioAdapter);
         /*---*/
 
@@ -150,7 +150,11 @@ public class GeneralRuleActivity extends AppCompatActivity implements AdapterVie
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendData();
+                if (opAdapter.checkOps != null ) {
+                    sendData();
+                } else {
+                    operationNull();
+                }
             }
         });
 
@@ -205,8 +209,8 @@ public class GeneralRuleActivity extends AppCompatActivity implements AdapterVie
 
         webService = adapterView.getItemAtPosition(i).toString();
 
-        switch (webService){
-            case "Serviço de localização":
+        switch (webService) {
+            case "Location service":
                 textOperation.setVisibility(View.VISIBLE);
                 doubtOperation.setVisibility(View.VISIBLE);
                 recyclerViewOp.setVisibility(View.VISIBLE);
@@ -221,7 +225,7 @@ public class GeneralRuleActivity extends AppCompatActivity implements AdapterVie
 
                 break;
 
-            case "Serviço de imagem":
+            case "Image service":
                 textOperation.setVisibility(View.VISIBLE);
                 doubtOperation.setVisibility(View.VISIBLE);
                 recyclerViewOp.setVisibility(View.VISIBLE);
@@ -235,7 +239,7 @@ public class GeneralRuleActivity extends AppCompatActivity implements AdapterVie
                 recyclerViewAudio.setEnabled(false);
                 break;
 
-            case "Serviço de voz":
+            case "Voice service":
                 textOperation.setVisibility(View.VISIBLE);
                 doubtOperation.setVisibility(View.VISIBLE);
                 recyclerViewOp.setVisibility(View.VISIBLE);
@@ -256,7 +260,7 @@ public class GeneralRuleActivity extends AppCompatActivity implements AdapterVie
 
     }
 
-    public void sendData(){
+    public void sendData() {
         generalScreen = new Intent(GeneralRuleActivity.this, ExtendRuleActivity.class);
 
         Bundle parameters = new Bundle();
@@ -264,11 +268,11 @@ public class GeneralRuleActivity extends AppCompatActivity implements AdapterVie
         parameters.putString("DescripRule", editDescritpRule.getText().toString());
         parameters.putString("SpinnerWebservice", webService);
         parameters.putString("CheckOperation", opAdapter.checkOps.toString());
-        if (objAdapter.checkLocation != null){
+        if (objAdapter.checkLocation != null) {
             parameters.putString("CheckObj", objAdapter.checkLocation.toString());
-        }else if (camAdapter.checkCamera != null){
+        } else if (camAdapter.checkCamera != null) {
             parameters.putString("CheckObj", camAdapter.checkCamera.toString());
-        }else if(audioAdapter.checkAudio != null){
+        } else if (audioAdapter.checkAudio != null) {
             parameters.putString("CheckObj", audioAdapter.checkAudio.toString());
         }
 
@@ -286,62 +290,71 @@ public class GeneralRuleActivity extends AppCompatActivity implements AdapterVie
         startActivity(generalScreen);
     }
 
-    public void showCore(){
+    public void showCore() {
         AlertDialog.Builder boxWeb = new AlertDialog.Builder(this);
-        boxWeb.setTitle("Controle de acesso");
-        boxWeb.setMessage("Por exemplo, para uma regra em que\" o sujeito A pode ler o arquivo B\", então, o \"sujeito A\" é o \"serviço móvel\", " +
-                "o \"arquivo B\" é o \"objeto\", e \"ler\" é a \"operação\".");
-        boxWeb.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        boxWeb.setTitle(R.string.txtBoxCore);
+        boxWeb.setMessage(R.string.showCore);
+        boxWeb.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         })
-        ;boxWeb.show();
+        ;
+        boxWeb.show();
     }
 
-    public void showWeb(){
+    public void showWeb() {
         AlertDialog.Builder boxWeb = new AlertDialog.Builder(this);
-        boxWeb.setTitle("Serviço móvel do sistema de brinquedo");
-        boxWeb.setMessage("Serviço móvel é um serviço disponibilizado pelo brinquedo para proporcionar a execução de parte de suas funcionalidades." +
-                "\n\n Cada serviço móvel precisa acessar diferentes tipos de objetos de dados para seu funcionamento.");
-        boxWeb.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        boxWeb.setTitle(R.string.txtBoxWeb);
+        boxWeb.setMessage(R.string.showWeb);
+        boxWeb.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         })
-        ;boxWeb.show();
+        ;
+        boxWeb.show();
     }
 
-    public void showOperation(){
+    public void showOperation() {
         AlertDialog.Builder boxWeb = new AlertDialog.Builder(this);
-        boxWeb.setTitle("Operações");
-        boxWeb.setMessage("As operações são ações que os serviços móveis podem executar sobre objetos de dados, conforme abaixo:" +
-                "\n\n Ler: permite que o objeto seja lido, ou seja, que dados sejam capturados (por exemplo, que áudio seja capturado de um microfone, que uma foto seja capturada de uma câmera, que uma posição de geolocalização seja capturada de um GPS etc.)." +
-                "\n\n Escrever: permite que dados sejam escritos no objeto, ou seja, que dados sejam enviados (por exemplo, que áudio seja enviado para um auto-falante, que vídeo seja enviado para uma tela etc.).");
-        boxWeb.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        boxWeb.setTitle(R.string.txtBoxOperation);
+        boxWeb.setMessage(R.string.showOperation);
+        boxWeb.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         })
-        ;boxWeb.show();
+        ;
+        boxWeb.show();
     }
 
-    public void showObject(){
+    public void showObject() {
         AlertDialog.Builder boxWeb = new AlertDialog.Builder(this);
-        boxWeb.setTitle("Objetos");
-        boxWeb.setMessage("Os objetos representam os tipos os dados provenientes do uso do brinquedo, capturados ou gerados e armazenados por dispositivos do brinquedo." +
-                "\n\n Importante: negar a permissão de coleta ou uso de determinados objetos de dados pode interferir diretamente na experiência da criança com o uso do brinquedo." +
-                "\n\n Para mais informações, acesse:\n\"Área dos pais > Restrições de uso\" ");
-        boxWeb.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        boxWeb.setTitle(R.string.txtBoxObject);
+        boxWeb.setMessage(R.string.showObject);
+        boxWeb.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         })
-        ;boxWeb.show();
+        ;
+        boxWeb.show();
     }
 
+    public void operationNull() {
+        AlertDialog.Builder opNull = new AlertDialog.Builder(this);
+        opNull.setMessage("Selecting at least one of the field options is required.");
+        opNull.setNeutralButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        opNull.show();
+    }
 }

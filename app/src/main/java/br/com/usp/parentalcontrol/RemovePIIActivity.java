@@ -7,21 +7,27 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class RemovePIIActivity extends AppCompatActivity {
 
     Button btClose;
     Button btRequest;
+    EditText justifyRemove;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_remove_pii);
 
+        justifyRemove = findViewById(R.id
+        .editRemovePII);
+
         btRequest = findViewById(R.id.removeRequire);
         btRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                justifyRemove.setText("");
                 confirmRequest();
             }
         });
@@ -37,9 +43,9 @@ public class RemovePIIActivity extends AppCompatActivity {
 
     public void confirmRequest(){
         AlertDialog.Builder requestReturn = new AlertDialog.Builder(this);
-        requestReturn.setTitle("Solicitação de remoção de PIIs efetuada!");
-        requestReturn.setMessage("A empresa enviará um e-mail com a confirmação da remoção dos dados.");
-        requestReturn.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        requestReturn.setTitle("Request sent!");
+        requestReturn.setMessage(R.string.responseRemove);
+        requestReturn.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 

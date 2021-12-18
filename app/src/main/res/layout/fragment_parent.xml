@@ -91,6 +91,7 @@
             android:layout_height="0dp"
             android:drawableStart="@drawable/ic_rate"
             android:drawableLeft="@drawable/ic_rate"
+            android:textSize="13dp"
             android:text="@string/btrisk"
             app:layout_constraintEnd_toStartOf="@+id/guideline1"
             app:layout_constraintHeight_percent="0.5"

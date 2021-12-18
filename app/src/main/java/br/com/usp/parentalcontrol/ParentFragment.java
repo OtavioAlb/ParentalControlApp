@@ -51,7 +51,7 @@ public class ParentFragment extends Fragment {
 
         databaseSql = new DatabaseSql(getActivity());
 
-        textOla.setText("Olá, "+databaseSql.buscarUser()+"!");
+        textOla.setText("Hello, "+databaseSql.buscarUser()+"!");
 
         perfilView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,9 +128,9 @@ public class ParentFragment extends Fragment {
 
     public void Message(){
         AlertDialog.Builder perfilEdit = new AlertDialog.Builder(getContext());
-        perfilEdit.setMessage("Editar os dados de usuário." +
-                "\n\n\n Obs: Funcionalidade ainda não implementada.");
-        perfilEdit.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        perfilEdit.setMessage("Edit the user data." +
+                "\n\n Functionality not implemented");
+        perfilEdit.setNeutralButton("close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 

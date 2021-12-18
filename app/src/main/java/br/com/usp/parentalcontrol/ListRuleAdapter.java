@@ -82,15 +82,16 @@ public class ListRuleAdapter  extends ArrayAdapter<Rule>  {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder confirmBox = new AlertDialog.Builder(getContext());
-                confirmBox.setTitle("Descrição da regra");
-                confirmBox.setMessage("A regra de privacidade "+(nameRule).toUpperCase()+" permitirá que o serviço móvel "+(webService).toUpperCase()+" realize a(s) operação(ões)"+
-                        "" +(operationCheck).toUpperCase()+" no(s) objeto(s) "+(objectCheck).toUpperCase()+", com o(s) propósito(s) de uso "
-                        +(purpose).toUpperCase()+", podendo ser compartilhado(s) de forma "+(recipient).toUpperCase()+", " +
-                        "precisando cumprir as obrigações definidas em "+(obligation).toUpperCase()+", e retidas pelo tempo "+(retention).toUpperCase()+".");
+                confirmBox.setTitle("Rule Description\n");
+                confirmBox.setMessage("Privacy rule "+(nameRule).toUpperCase()+" will allow mobile service "+(webService).toUpperCase()+
+                                " to perform operation(s) "+(operationCheck).toUpperCase()+" on object(s) "+(objectCheck).toUpperCase()+" for " +
+                                "the purpose(s) of use "+(purpose).toUpperCase()+" and can be shared in the form "+(recipient).toUpperCase()+
+                                ", having to fulfill the obligation(s) defined in "+(obligation).toUpperCase()+", and retained by the time "
+                                +(retention).toUpperCase()+".");
 
 
 
-                confirmBox.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+                confirmBox.setNeutralButton("Close", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                     }
@@ -128,13 +129,13 @@ public class ListRuleAdapter  extends ArrayAdapter<Rule>  {
                 AlertDialog.Builder confirmBox = new AlertDialog.Builder(getContext());
                 confirmBox.setTitle(R.string.txtRevoke);
                 confirmBox.setMessage(R.string.descriRevogar);
-                confirmBox.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                confirmBox.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                     }
                 });
-                confirmBox.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                confirmBox.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 

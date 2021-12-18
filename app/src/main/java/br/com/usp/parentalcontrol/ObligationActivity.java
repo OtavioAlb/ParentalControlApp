@@ -129,7 +129,11 @@ public class ObligationActivity extends AppCompatActivity {
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendData();
+                if (obligationAdapter.txtCheckObligation != null){
+                    sendData();
+                }else{
+                    nomNull();
+                }
             }
         });
 
@@ -178,7 +182,7 @@ public class ObligationActivity extends AppCompatActivity {
 
     public void showObligation(){
         AlertDialog.Builder boxWeb = new AlertDialog.Builder(this);
-        boxWeb.setTitle("Obrigação");
+        boxWeb.setTitle("Obligations");
         boxWeb.setMessage(getResources().getString(R.string.popupObligation));
         boxWeb.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
             @Override
@@ -191,15 +195,27 @@ public class ObligationActivity extends AppCompatActivity {
 
     public void showRetention(){
         AlertDialog.Builder boxWeb = new AlertDialog.Builder(this);
-        boxWeb.setTitle("Retenção");
+        boxWeb.setTitle("Retention");
         boxWeb.setMessage(getResources().getString(R.string.popupRetention));
-        boxWeb.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        boxWeb.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         })
         ;boxWeb.show();
+    }
+
+    public void nomNull() {
+        AlertDialog.Builder opNull = new AlertDialog.Builder(this);
+        opNull.setMessage("Selecting at least one of the field options is required.");
+        opNull.setNeutralButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        opNull.show();
     }
 
 }

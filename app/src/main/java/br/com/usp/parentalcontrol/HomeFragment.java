@@ -94,9 +94,9 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder editBox = new AlertDialog.Builder(getContext());
-                editBox.setMessage("Editar a regra de privacidade selecionada." +
-                        "\n\n\n Obs: Funcionalidade ainda não implementada.");
-                editBox.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+                editBox.setMessage("Edit the selected privacy rule." +
+                        "\n\n Functionality not implemented.");
+                editBox.setNeutralButton("Close", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -124,15 +124,15 @@ public class HomeFragment extends Fragment {
 
     public void createRuleConfirm(){
         AlertDialog.Builder confirmBox = new AlertDialog.Builder(getContext());
-        confirmBox.setMessage("Selecione um método para criar a regra:");
-        confirmBox.setPositiveButton("Do Início", new DialogInterface.OnClickListener() {
+        confirmBox.setMessage("Select a method to create the privacy rule:");
+        confirmBox.setNegativeButton("From scratch", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent newRule = new Intent(getContext(), GeneralRuleActivity.class);
                 startActivity(newRule);
             }
         });
-        confirmBox.setNegativeButton("Baseado em Modelo", new DialogInterface.OnClickListener() {
+        confirmBox.setPositiveButton("Template based", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent templateIntent = new Intent(getContext(), TemplateActivity.class);

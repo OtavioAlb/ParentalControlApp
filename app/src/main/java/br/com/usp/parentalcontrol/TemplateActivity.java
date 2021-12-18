@@ -28,7 +28,7 @@ public class TemplateActivity extends AppCompatActivity {
     ListRuleAdapter templateAdapter;
     int idItemSelected;
 
-    String[] rules = {"Regra de serviço de localização para jogos","Regra de serviço de imagem apenas para fotos","Regra de serviço de voz para restrição no envio de dados via microfone"};
+    String[] rules = {"Location service rule for games","Image service rule for photos only","Voice service rule for restriction on sending data via microphone"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,15 +45,15 @@ public class TemplateActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String teste = adapterView.getItemAtPosition(i).toString();
                 switch (teste){
-                    case "Regra de serviço de localização para jogos":
+                    case "Location service rule for games":
                         Message1();
                         break;
 
-                    case "Regra de serviço de imagem apenas para fotos":
+                    case "Image service rule for photos only":
                         Message2();
                         break;
 
-                    case "Regra de serviço de voz para restrição no envio de dados via microfone":
+                    case "Voice service rule for restriction on sending data via microphone":
                         Message3();
                         break;
                 }
@@ -87,16 +87,15 @@ public class TemplateActivity extends AppCompatActivity {
 
     public void searchBox(){
         AlertDialog.Builder search = new AlertDialog.Builder(this);
-        search.setTitle("Buscar regra externa");
-        search.setMessage("Esta opção habilita o usuário buscar arquivos .xml de regras predefinidas externas à ferramenta." +
-                "\n\n\n Obs: funcionalidade ainda não implementada.");
-        search.setPositiveButton("Buscar", new DialogInterface.OnClickListener() {
+        search.setTitle(R.string.txtBuscar);
+        search.setMessage(R.string.descBusca);
+        search.setPositiveButton("Search rule", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         });
-        search.setNegativeButton("Fechar", new DialogInterface.OnClickListener() {
+        search.setNegativeButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -107,17 +106,15 @@ public class TemplateActivity extends AppCompatActivity {
 
     public void selectBox(){
         AlertDialog.Builder select = new AlertDialog.Builder(this);
-        select.setTitle("Selecionar regra");
-        select.setMessage("Você confirma a seleção do modelo de regra?" +
-                "\n Ao confirmar você habilita a regra para utilização, a qual será adicionada em sua tabela de regras de privaciadde em \"Gerenciar regras\"." +
-                "\n\n\n Obs: funcionalidade ainda não implementada.");
-        select.setPositiveButton("Sim, confirmo", new DialogInterface.OnClickListener() {
+        select.setTitle(R.string.txtSelecionar);
+        select.setMessage(R.string.descSelecionar);
+        select.setPositiveButton("Yes, I agree", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
         });
-        select.setNegativeButton("Fechar", new DialogInterface.OnClickListener() {
+        select.setNegativeButton("No, cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -129,11 +126,11 @@ public class TemplateActivity extends AppCompatActivity {
 
     public void Message1(){
         AlertDialog.Builder descriptBox = new AlertDialog.Builder(this);
-        descriptBox.setTitle("Descrição da regra");
-        descriptBox.setMessage("A regra de privacidade permitirá que o serviço móvel de LOCALIZAÇÃO realize as operações "+
-                "LER e ESCREVER nos objetos LOCALIZAÇÃO ABSOLUTA E LOCALIZAÇÃO RELATIVA, com o propósito de uso JOGOS, " +
-                "podendo ser compartilhado para GRUPO (multi-jogador), precisando cumprir as obrigações definidas em PIPEDA E COPPA, e retidas pelo tempo do PROPÓSITO DEFINIDO.");
-        descriptBox.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        descriptBox.setTitle("Rule Description");
+        descriptBox.setMessage("Privacy rule will allow mobile service of LOCATION to perform operations CAPTURE and SEND " +
+                        "on objects ABSOLUTE LOCATION and RELATIVE LOCATION for the purpose of use GAME and can be shared in the form " +
+                        "GROUP, having to fulfill the obligations defined in PIPEDA and COPPA, and retained by the time STATED PURPOSE.");
+        descriptBox.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -144,11 +141,11 @@ public class TemplateActivity extends AppCompatActivity {
 
     public void Message2(){
         AlertDialog.Builder descriptBox = new AlertDialog.Builder(this);
-        descriptBox.setTitle("Descrição da regra");
-        descriptBox.setMessage("A regra de privacidade permitirá que o serviço móvel de IMAGEM realize as operações "+
-                "LER e ESCREVER no objeto FOTO, com o propósito de uso QUALQUER UM, " +
-                "podendo ser compartilhado para QUALQUER UM, precisando cumprir as obrigações definidas em PIPEDA, e retidas pelo tempo PERSONALIZADO DE 2 MESES.");
-        descriptBox.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        descriptBox.setTitle("Rule Description");
+        descriptBox.setMessage("Privacy rule will allow mobile service of IMAGEM to perform operations CAPTURE and SEND " +
+                        "on object PHOTO for the purpose of use ANY and can be shared in the form " +
+                        "ANY, having to fulfill the obligation defined in PIPEDA, and retained by the time PERSONALIZED for 2 MONTHS. ");
+        descriptBox.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -159,11 +156,11 @@ public class TemplateActivity extends AppCompatActivity {
 
     public void Message3(){
         AlertDialog.Builder descriptBox = new AlertDialog.Builder(this);
-        descriptBox.setTitle("Descrição da regra");
-        descriptBox.setMessage("A regra de privacidade permitirá que o serviço móvel de VOZ realize as operações "+
-                "ESCREVER no objeto ÁUDIO, com o propósito de uso JOGOS, " +
-                "podendo ser compartilhado para INDIVIDUAL, precisando cumprir as obrigações definidas em COPPA, e retidas pelo tempo do REQUISITO LEGAL.");
-        descriptBox.setNeutralButton("Fechar", new DialogInterface.OnClickListener() {
+        descriptBox.setTitle("Rule Description");
+        descriptBox.setMessage("Privacy rule will allow mobile service of VOICE to perform operation SEND on object AUDIO  " +
+                        "for the purpose of use GAME and can be shared in the form INDIVIDUAL, " +
+                        "having to fulfill the obligations defined in COPPA, and retained by the time LEGAL REQUIREMENT.");
+        descriptBox.setNeutralButton("Close", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
